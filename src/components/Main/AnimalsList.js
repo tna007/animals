@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 
 import AnimalCard from "./AnimalCard";
+import NewAnimal from "./NewAnimal";
 
 import axios from "axios";
 
-function AnimalsList(props) {
+function AnimalsList() {
   const [animals, setAnimals] = useState([]);
 
   useEffect(() => {
@@ -12,7 +13,24 @@ function AnimalsList(props) {
       .get("http://localhost:3001/animals")
       .then((resp) => setAnimals(resp.data));
   }, []);
-  console.log(animals);
+
+  const [newAnimal, setNewAnimal] = useState({
+    name: "",
+    aclass: "",
+    img: "",
+    desc: "",
+    link: "",
+  });
+
+  const changeHandler = (e) => {
+    setNewAnimal({ ...newAnimal, [e.target.name]: e.target.value });
+    console.log(newAnimal);
+  };
+
+  const sendData = (e) => {
+    e.preventDefault();
+    axios.post("http://localhost:3001/animals", newAnimal);
+  };
 
   return (
     <div className="posts">
@@ -26,6 +44,7 @@ function AnimalsList(props) {
           img={animal.img}
         />
       ))}
+      <NewAnimal value={changeHandler} submit={sendData} />
     </div>
   );
 }

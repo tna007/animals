@@ -8,7 +8,7 @@ function AnimalCard({ name, link, img, desc, aclass }) {
     <div className="post">
       <h2>{name}</h2>
       <img src={img} alt={name}></img>
-      <h4>{aclass.toUpperCase()}</h4>
+      <em>{aclass.toUpperCase()}</em>
       <p>{truncate(desc, 72)}</p>
       <a href={link}>More</a>
     </div>
