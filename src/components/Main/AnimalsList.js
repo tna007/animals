@@ -13,16 +13,18 @@ function AnimalsList(props) {
       .then((resp) => setAnimals(resp.data));
   }, []);
   console.log(animals);
+
   return (
-    <div>
+    <div className="posts">
       {animals.map((animal) => (
-        <div key={animal.id}>
-          <h1>{animal.name}</h1>
-          <img src={animal.img}></img>
-          <h4>{animal.aclass.toUpperCase()}</h4>
-          <p>{animal.desc}</p>
-          <a href={animal.link}>More</a>
-        </div>
+        <AnimalCard
+          key={animal.id}
+          name={animal.name}
+          desc={animal.desc}
+          aclass={animal.aclass}
+          link={animal.link}
+          img={animal.img}
+        />
       ))}
     </div>
   );
