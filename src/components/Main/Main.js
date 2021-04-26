@@ -1,9 +1,13 @@
 import React from "react";
 
+import AnimalsList from "./AnimalsList";
+import NewAnimal from "./NewAnimal";
+
 const Main = () => {
   return (
     <main>
-      <p>Main area </p>
+      <AnimalsList />
+      <NewAnimal />
     </main>
   );
 };
