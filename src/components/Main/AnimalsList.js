@@ -1,7 +1,6 @@
 import React from "react";
 
 import AnimalCard from "./AnimalCard";
-// import NewAnimal from "./NewAnimal";
 
 function AnimalsList({ animals }) {
   return (
@@ -12,7 +11,7 @@ function AnimalsList({ animals }) {
           name={animal.name}
           desc={animal.desc}
           aclass={animal.aclass}
-          link={animal.link}
+          link={animal.id}
           img={animal.img}
         />
       ))}

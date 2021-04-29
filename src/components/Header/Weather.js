@@ -33,8 +33,9 @@ const Weather = () => {
   return (
     <div>
       <p>
-        {weather.name}, {Math.round(weather.main.temp)}°C. Feels like{" "}
-        {Math.round(weather.main.feels_like)}°C
+        {weather.name}, {weather.weather[0].description},{" "}
+        {Math.round(weather.main.temp)}°C.{" "}
+        <em>Feels like {Math.round(weather.main.feels_like)}°C.</em>
       </p>
     </div>
   );

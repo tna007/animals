@@ -86,8 +86,7 @@ form {
 }
 
 input,
-select,
-textarea {
+select {
   display: inline-block;
   padding: 0.5rem;
   margin: 1rem 0;

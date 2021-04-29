@@ -47,6 +47,14 @@
       "desc": "The lion is a species in the family Felidae and a member of the genus Panthera. It has a muscular, deep-chested body, short, rounded head, round ears, and a hairy tuft at the end of its tail. It is sexually dimorphic; adult male lions have a prominent mane.",
       "link": "https://en.wikipedia.org/wiki/Lion",
       "id": 6
+    },
+    {
+      "name": "Dolphin",
+      "aclass": "mamals",
+      "img": "https://source.unsplash.com/Xsq5ie5f498",
+      "desc": "Dolphins are descendants of land-dwelling mammals of the artiodactyl order (even-toed ungulates). They are related to the Indohyus, an extinct chevrotain-like",
+      "link": "https://en.wikipedia.org/wiki/Dolphin",
+      "id": 7
     }
   ]
 }
