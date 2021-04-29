@@ -13,7 +13,6 @@ function AnimalSpa() {
         .get("http://localhost:3001/animals/" + id)
         .then((resp) => setAnimal(resp.data));
     }
-    console.log(animal);
   });
 
   let animalData;
