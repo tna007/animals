@@ -1,11 +1,12 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
-import { useParams } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 
 function AnimalSpa() {
   const [animal, setAnimal] = useState();
   let { id } = useParams();
+  let history = useHistory();
 
   useEffect(() => {
     if (!animal) {
@@ -28,6 +29,7 @@ function AnimalSpa() {
             Read more
           </a>
         </p>
+        <button onClick={() => history.goBack()}>Back</button>
       </>
     );
   } else {
